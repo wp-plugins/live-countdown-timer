@@ -1,6 +1,7 @@
 .live_countdown_timerClass{
 display:block;
 overflow:hidden;
+text-align:center;
 }
 
 .live_countdown_timerClass .xLCTTime div{
