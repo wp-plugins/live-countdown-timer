@@ -80,13 +80,13 @@ function live_countdown_timer_CalcDate($xFromDate, $xVal){
 	}
 	?>		
 		<style type="text/css">
-		.live_countdown_timerClass #live-countdown-timer .xLCTTime div{
+		.live_countdown_timerClass .xLCTTime div{
 			background:url(<?php bloginfo('url'); ?>/wp-content/plugins/live-countdown-timer/images/<?php echo $xLCTJpg;?>);
 		}
-		.live_countdown_timerClass #live-countdown-timer .xLCTText{
+		.live_countdown_timerClass .xLCTText{
 			background:url(<?php bloginfo('url'); ?>/wp-content/plugins/live-countdown-timer/images/text<?php echo $xLCTJpg;?>);
 		}
-		.live_countdown_timerClass #live-countdown-timer .xLCTContent{
+		.live_countdown_timerClass .xLCTContent{
 			background:<?php echo $xLCTBGColor;?>;
 		}
 		</style>
