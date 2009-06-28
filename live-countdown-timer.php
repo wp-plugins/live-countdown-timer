@@ -2,11 +2,11 @@
 /*
 
 Plugin Name: Live Countdown Timer
-Plugin URI: http://www.appchain.com/2009/06/live-countdown-timer-1-0/
+Plugin URI: http://www.appchain.com/2009/06/live-countdown-timer-1-1/
 Description: Live Countdown Timer to an important event you want to show
 Author: Turcu Ciprian
 License: GPL
-Version: 1.0
+Version: 1.1
 Author URI: http://www.appchain.com
 
 */
@@ -35,7 +35,9 @@ function live_countdown_timer_CalcDate($xFromDate, $xVal){
 	return $xResult;
 }
 // This prints the widget
-	function live_countdown_timer_WidgetShow() {
+	function live_countdown_timer_WidgetShow($args) {
+	
+	extract( $args );
 	
 		$xDBArr = unserialize(get_option('live_countdown_timer_Values'));
 		
@@ -59,6 +61,18 @@ function live_countdown_timer_CalcDate($xFromDate, $xVal){
 			$xLCTJpg = "c.jpg";
 			$xLCTBGColor = "#FFFFFF";
 		break;
+		case "3":
+			$xLCTJpg = "d.jpg";
+			$xLCTBGColor = "#000000";
+		break;
+		case "4":
+			$xLCTJpg = "e.jpg";
+			$xLCTBGColor = "#000000";
+		break;
+		case "5":
+			$xLCTJpg = "f.jpg";
+			$xLCTBGColor = "#FFFFFF";
+		break;		
 		default:
 			$xLCTJpg = "a.jpg";
 			$xLCTBGColor = "#000000";
@@ -66,20 +80,20 @@ function live_countdown_timer_CalcDate($xFromDate, $xVal){
 	}
 	?>		
 		<style type="text/css">
-		.live_countdown_timer .widgetcontent .xLCTTime div{
+		.live_countdown_timerClass #live-countdown-timer .xLCTTime div{
 			background:url(<?php bloginfo('url'); ?>/wp-content/plugins/live-countdown-timer/images/<?php echo $xLCTJpg;?>);
 		}
-		.live_countdown_timer .widgetcontent .xLCTText{
+		.live_countdown_timerClass #live-countdown-timer .xLCTText{
 			background:url(<?php bloginfo('url'); ?>/wp-content/plugins/live-countdown-timer/images/text<?php echo $xLCTJpg;?>);
 		}
-		.live_countdown_timer .widgetcontent .xLCTContent{
+		.live_countdown_timerClass #live-countdown-timer .xLCTContent{
 			background:<?php echo $xLCTBGColor;?>;
 		}
 		</style>
 
-		<div id="live_countdown_timer" class="live_countdown_timer">
-		<h4 class="widgettitle"><?php echo $live_countdown_timer_Title;?></h4>
-			<div class="widgetcontent" style="text-align:center;">
+		<div class="live_countdown_timerClass">
+		<?php echo $before_title.$live_countdown_timer_Title.$after_title;?>
+			<?php echo $before_widget;?>
 			<div class="xLCTC">
 				<div class="xLCTContent">
 				<div class="xLCTText"></div>
@@ -99,7 +113,7 @@ function live_countdown_timer_CalcDate($xFromDate, $xVal){
 				</div>
 				</div>
 			</div>
-			</div>
+			<?php echo $after_widget;?>
 		</div>
 		<script type="text/javascript" src="<?php echo bloginfo('url'); ?>/wp-content/plugins/live-countdown-timer/script.js"></script>
 		<script type="text/javascript">
@@ -192,6 +206,12 @@ if($_POST['live_countdown_timer_days'])
 	   <img src="<?php bloginfo('url'); ?>/wp-content/plugins/live-countdown-timer/images/b.jpg" alt="if you can see this instead of the picture, you did not install the plugin corectly"/><br/>
 	   <input type="radio" class="xLCTRadio" name="live_countdown_timer_Pic" value="2" <?php if($xPic==2){echo "checked";}?> />
 	   <img src="<?php bloginfo('url'); ?>/wp-content/plugins/live-countdown-timer/images/c.jpg" alt="if you can see this instead of the picture, you did not install the plugin corectly"/><br/>
+	    <input type="radio" class="xLCTRadio" name="live_countdown_timer_Pic" value="3" <?php if($xPic==3){echo "checked";}?> />
+	   <img src="<?php bloginfo('url'); ?>/wp-content/plugins/live-countdown-timer/images/d.jpg" alt="if you can see this instead of the picture, you did not install the plugin corectly"/><br/>
+	    <input type="radio" class="xLCTRadio" name="live_countdown_timer_Pic" value="4" <?php if($xPic==4){echo "checked";}?> />
+	   <img src="<?php bloginfo('url'); ?>/wp-content/plugins/live-countdown-timer/images/e.jpg" alt="if you can see this instead of the picture, you did not install the plugin corectly"/><br/>
+	    <input type="radio" class="xLCTRadio" name="live_countdown_timer_Pic" value="5" <?php if($xPic==5){echo "checked";}?> />
+	   <img src="<?php bloginfo('url'); ?>/wp-content/plugins/live-countdown-timer/images/f.jpg" alt="if you can see this instead of the picture, you did not install the plugin corectly"/><br/>
 	   <?php 
 }
 function live_countdown_timer_AddStyle(){

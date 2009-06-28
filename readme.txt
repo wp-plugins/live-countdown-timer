@@ -11,9 +11,13 @@ Widget that will enable you to show a beautifull live countdown timer for an eve
 
 == Description ==
 
-Widget that will enable you to show a beautifull live countdown timer for an event. <br/>
-You can choose from different designs.
-Requires JavaScript Enabled (for the countdown to work) or it will not work.<br/>
+- Widget that will enable you to show a beautifull live countdown timer for an event. <br/>
+- You can choose from different designs.<br/>
+- Requires JavaScript Enabled (for the countdown to work) or it will not work.<br/><br/>
+<a href="http://www.appchain.com/2009/06/live-countdown-timer-1-1/">More details</a><br/>
+For  Sugestions / bugs / thanks <a href="http://www.appchain.com/2009/06/live-countdown-timer-1-1/#comments">Click Here</a><br/>
+<br/>
+For our other plugins: <a href="http://wordpress.org/extend/plugins/profile/ciprian_vb">Click Here</a>
 
 == Installation ==
 
