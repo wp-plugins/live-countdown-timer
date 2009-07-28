@@ -32,6 +32,8 @@ Activate it in the plugins menu in your wp-admin control panel and voila! you're
 
 = 1.2 =
 Makes all timers transparent (see description for ie6 compatibility)
+= 1.2.1 =
+Small url problem fixed
 
 == Screenshots ==
 
