@@ -6,7 +6,7 @@ Plugin URI: http://www.appchain.com/2009/07/live-countdown-timer-1-2/
 Description: Live Countdown Timer to an important event you want to show
 Author: Turcu Ciprian
 License: GPL
-Version: 1.2.1
+Version: 1.2.2
 Author URI: http://www.appchain.com
 
 */
@@ -67,17 +67,16 @@ function live_countdown_timer_CalcDate($xFromDate, $xVal){
 	}
 	?>		
 		<style type="text/css">
-		.live_countdown_timerClass .xLCTTime div{
+		.xLCTTime div{
 			background:url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/live-countdown-timer/images/<?php echo $xLCTJpg;?>);
 		}
-		.live_countdown_timerClass .xLCTText{
+		.xLCTText{
 			background:url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/live-countdown-timer/images/text<?php echo $xLCTJpg;?>);
 		}
 		</style>
-
-		<div class="live_countdown_timerClass">
+		<?php echo $before_widget;?>
 		<?php echo $before_title.$live_countdown_timer_Title.$after_title;?>
-			<?php echo $before_widget;?>
+			
 			<div class="xLCTC">
 				<div class="xLCTContent">
 				<div class="xLCTText"></div>
@@ -98,11 +97,10 @@ function live_countdown_timer_CalcDate($xFromDate, $xVal){
 				</div>
 			</div>
 			<?php echo $after_widget;?>
-		</div>
-		<script type="text/javascript" src="<?php echo bloginfo('wpurl'); ?>/wp-content/plugins/live-countdown-timer/script.js"></script>
-		<script type="text/javascript">
+			<script type="text/javascript" src="<?php echo bloginfo('wpurl'); ?>/wp-content/plugins/live-countdown-timer/script.js"></script>
+			<script type="text/javascript">
 			live_countdown_timer_Start('<?php echo $xValueArrx;?>');
-		</script>
+			</script>
 		<?php
 	}
 function live_countdown_timer_WidgetInit() {
