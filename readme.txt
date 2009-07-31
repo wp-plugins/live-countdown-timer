@@ -32,8 +32,12 @@ Activate it in the plugins menu in your wp-admin control panel and voila! you're
 
 = 1.2 =
 Makes all timers transparent (see description for ie6 compatibility)
-= 1.2.1 =
-Small url problem fixed
+
+= 1.2.2 =
+Small Design bug Fixed -  Widget compatible with all well writter wp themes
+
+= 1.2.3 =
+small css bug 1.2.2 is not working! upgrade to 1.2.3!
 
 == Screenshots ==
 
