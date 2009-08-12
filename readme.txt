@@ -4,7 +4,7 @@ Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=cipria
 Contributors: ciprian_vb
 Tags: plugin, images, image, pictures, picture, widget, icon, timer, countdown, time, event,events, clock
 Requires at least: 2.3
-Tested up to: 2.8.2
+Tested up to: 2.8.4
 Stable tag: trunk
 
 Widget that will enable you to show a beautifull live countdown timer for an event.
@@ -32,8 +32,12 @@ Activate it in the plugins menu in your wp-admin control panel and voila! you're
 
 = 1.2 =
 Makes all timers transparent (see description for ie6 compatibility)
-= 1.2.1 =
-Small url problem fixed
+
+= 1.2.2 =
+Small Design bug Fixed -  Widget compatible with all well writter wp themes
+
+= 1.2.3 =
+small css bug 1.2.2 is not working! upgrade to 1.2.3!
 
 == Screenshots ==
 

@@ -1,9 +1,4 @@
-.live_countdown_timerClass{
-display:block;
-overflow:hidden;
-}
-
-.live_countdown_timerClass .xLCTTime div{
+.xLCTTime div{
 margin:0px;
 padding:0px;
 float:left;
@@ -15,7 +10,7 @@ height:25px;
 content:none;
 margin-top:5px;
 }
-.live_countdown_timerClass .xLCTText{
+.xLCTText{
 margin:0px;
 padding:0px;
 float:left;
@@ -29,7 +24,7 @@ margin-left:6px;
 margin-top:10px;
 margin-right:40px;
 }
-.live_countdown_timerClass .xLCTContent{
+.xLCTContent{
 margin:0px;
 padding:0px;
 display:inline-box;
@@ -42,10 +37,10 @@ margin:0px;
 padding:0px;
 margin-top:-20px;
 }
-.live_countdown_timerClass .xLCTC{
+.xLCTC{
 text-align:center;
 }
-.live_countdown_timerClass .xLCTContent{
+.xLCTContent{
 overflow:hidden;
 width:144px;
 margin-left:0px;
