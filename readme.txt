@@ -4,7 +4,7 @@ Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=cipria
 Contributors: ciprian_vb
 Tags: plugin, images, image, pictures, picture, widget, icon, timer, countdown, time, event,events, clock
 Requires at least: 2.3
-Tested up to: 2.8.2
+Tested up to: 2.8.4
 Stable tag: trunk
 
 Widget that will enable you to show a beautifull live countdown timer for an event.
