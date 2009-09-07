@@ -6,7 +6,7 @@ Plugin URI: http://www.appchain.com/live-countdown-timer/
 Description: Live Countdown Timer to an important event you want to show 
 Author: Turcu Ciprian
 License: GPL
-Version: 2.0
+Version: 2.0.0.1
 Author URI: http://www.appchain.com
 
 */
