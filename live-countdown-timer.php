@@ -22,10 +22,11 @@ function live_countdown_timer_WidgetShow($args) {
 
     echo $before_widget;?>
     <?php echo $before_title.$live_countdown_timer_Title.$after_title;?>
+<?php echo WP_PLUGIN_URL;?>
 <div class="xLCTC">
     <object width="140" height="60">
-        <param name="movie" value="<?php echo PLUGINDIR;?>\live-countdown-timer\lct.swf?path=<?php echo PLUGINDIR;?>\live-countdown-timer&postID=x">
-        <embed src="<?php echo PLUGINDIR;?>\live-countdown-timer\lct.swf?path=<?php echo PLUGINDIR;?>\live-countdown-timer&postID=x" width="140" height="60"></embed>
+        <param name="movie" value="<?php echo WP_PLUGIN_URL;?>/live-countdown-timer/lct.swf?path=<?php echo PLUGINDIR;?>/live-countdown-timer&postID=x">
+        <embed src="<?php echo WP_PLUGIN_URL;?>/live-countdown-timer/lct.swf?path=<?php echo PLUGINDIR;?>/live-countdown-timer&postID=x" width="140" height="60"></embed>
     </object>
 </div>
     <?php echo $after_widget;?>
@@ -303,8 +304,8 @@ function live_countdown_timer_ChangeContent($xString) {
     $xpost_ID = $post->ID;
     $xRepValx='[LCT-|-embed]';
     $xValue='<object width="140" height="60">
-        <param name="movie" value="<?php echo PLUGINDIR;?>\live-countdown-timer\lct.swf?path='.PLUGINDIR.'\live-countdown-timer&postID='.$xpost_ID.'">
-        <embed src="'.PLUGINDIR.'\live-countdown-timer\lct.swf?path='.PLUGINDIR.'\live-countdown-timer&postID='.$xpost_ID.'" width="140" height="60"></embed>
+        <param name="movie" value="'.WP_PLUGIN_URL.'\live-countdown-timer\lct.swf?path='.WP_PLUGIN_URL.'\live-countdown-timer&postID='.$xpost_ID.'">
+        <embed src="'.WP_PLUGIN_URL.'\live-countdown-timer\lct.swf?path='.WP_PLUGIN_URL.'\live-countdown-timer&postID='.$xpost_ID.'" width="140" height="60"></embed>
     </object>';
     $xString = str_replace($xRepValx, $xValue, $xString);
     return $xString;
