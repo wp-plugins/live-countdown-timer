@@ -40,12 +40,12 @@ Small Design bug Fixed -  Widget compatible with all well writter wp themes
 = 1.2.3 =
 small css bug 1.2.2 is not working! upgrade to 1.2.3!
 
-=2.0=
+= 2.0 =
 - Timer in flash<br/>
 - Can be added to post<br/>
 - All colors customizable<br/>
 - Easyer date/time pick<br/>
-=2.0.0.1
+= 2.0.0.1 =
 - small fast, urgent link bug (2.0 did not work properly in clean url's
 == Screenshots ==
 
