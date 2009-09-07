@@ -34,6 +34,7 @@ function live_countdown_timer_CalcDate($xFromDate) {
         if($xFinal>60) {
             $xMinutes = floor($xFinal/60);
             $xFinal = $xFinal-($xMinutes*60);
+            $xSeconds = $xFinal;
         }else {
             $xMinutes = 0;
             $xSeconds = $xFinal;
