@@ -58,7 +58,6 @@ function live_countdown_timer_form() {
 }
 function live_countdown_timer_AddStyle() {
     ?>
-<link rel="stylesheet" href="http://jqueryui.com/latest/themes/base/ui.all.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo  WP_PLUGIN_URL;?>/live-countdown-timer/style.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo WP_PLUGIN_URL;?>/live-countdown-timer/css/datepicker.css" type="text/css" />
 <?php
