@@ -10,14 +10,10 @@ Stable tag: trunk
 Widget/Plugin that will enable you to show a beautifull live countdown timer for an event.
 
 == Description ==
-If you find this usefull, make us a donation:
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="8320560">
-<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-<br/><br/>
+<b>DONATE!</b>
+<br/><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8322585">DONATE HERE</a> - (any ammount using paypal or credit card)
+<br/>
+<br/>
 
 - Widget that will enable you to show a beautifull live countdown timer for an event. <br/>
 - You can choose from different text colors.<br/>
