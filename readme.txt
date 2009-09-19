@@ -23,7 +23,7 @@ If you find this usefull, make us a donation:
 - You can choose from different text colors.<br/>
 - Has text glow effect that you can change color to.<br/>
 - You can change background color.<br/>
-- Timer Can be added to post or page content.<br/>
+- Timer Can be added to posts or pages content.<br/>
 <br/><br/>
 
 <a href="http://www.appchain.com/live-countdown-timer/">More details</a><br/>
