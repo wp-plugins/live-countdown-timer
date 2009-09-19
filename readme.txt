@@ -10,10 +10,6 @@ Stable tag: trunk
 Widget/Plugin that will enable you to show a beautifull live countdown timer for an event.
 
 == Description ==
-<b>DONATE!</b>
-<br/><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8322585">DONATE HERE</a> - (any ammount using paypal or credit card)
-<br/>
-<br/>
 
 - Widget that will enable you to show a beautifull live countdown timer for an event. <br/>
 - You can choose from different text colors.<br/>
@@ -26,7 +22,10 @@ Widget/Plugin that will enable you to show a beautifull live countdown timer for
 For  Sugestions / bugs / thanks <a href="http://www.appchain.com/live-countdown-timer/#comments">Click Here</a><br/>
 <br/>
 For our other plugins: <a href="http://wordpress.org/extend/plugins/profile/ciprian_vb">Click Here</a>
-
+<br/><br/>
+<b>DONATE!</b>
+<br/><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8322585">DONATE HERE</a> - (any ammount using paypal or credit card)
+<br/>
 == Installation ==
 
 Upload the Live Countdown Timer plugin to your blog(in the wp-content/plugins directory) (be sure to upload the "live-countdown-timer" directory or it  will not work.
