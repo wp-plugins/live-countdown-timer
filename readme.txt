@@ -10,7 +10,7 @@ Stable tag: trunk
 Widget/Plugin that will enable you to show a beautifull live countdown timer for an event.
 
 == Description ==
-If you find this usefull, don't forget to thank us if you want:
+If you find this usefull, make us a donation:
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="8320560">
