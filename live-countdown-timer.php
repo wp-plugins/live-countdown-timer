@@ -6,7 +6,7 @@ Plugin URI: http://www.appchain.com/live-countdown-timer/
 Description: Live Countdown Timer to an important event you want to show 
 Author: Turcu Ciprian
 License: GPL
-Version: 2.1.0.1
+Version: 2.1.0.2
 Author URI: http://www.appchain.com
 
 */
@@ -617,7 +617,6 @@ function live_countdown_timer_ChangeContent($xString) {
         $postTimeZone = $xDBArr[14];
         $postTransparentBackground = $xDBArr[15];
 
-        $xNrOfDHMS = "0:12:1:3";
 
         $xRepValx='[LCT-|-embed]';
         //calculate time with timezone
@@ -632,15 +631,19 @@ function live_countdown_timer_ChangeContent($xString) {
         $xDBDate[4]=$xArrPostDate[1];
         $xDBDate[5]=$xArrPostDate[2];
 
-        $xNrOfDHMS = live_countdown_timer_CalcDate($xDBDate);
+        if(strpos($xString,$xRepValx)!=FALSE) {
+            $xNrOfDHMS = live_countdown_timer_CalcDate($xDBDate);
 
-        $xValue='<div class="LCTimerWidget_Counter" id="LCTimerWidget_Counter'.$xpost_ID.'">Loading...</div>
+            $xValue='<div class="LCTimerWidget_Counter" id="LCTimerWidget_Counter'.$xpost_ID.'">Loading...</div>
 <script type="text/javascript">
     LCTimer_Count_Timer(\'#LCTimerWidget_Counter'.$xpost_ID.'\',\''.$postTextColor.'\',\''.$postBackground.'\',\''.$postFont.'\'
     ,\''.$postTimerType.'\',\''.$postLCTTypeSize.'\',\''.$postDD.'\',\''.$postHH.'\',
     \''.$postMM.'\',\''.$postSS.'\',\''.$xNrOfDHMS.'\',\''.$postTransparentBackground.'\');
 </script>';
-        $xString = str_replace($xRepValx, $xValue, $xString);
+
+            $xString = str_replace($xRepValx, $xValue, $xString);
+        }
+
     }
     return $xString;
 }
