@@ -6,7 +6,7 @@ Plugin URI: http://www.appchain.com/live-countdown-timer/
 Description: Live Countdown Timer to an important event you want to show 
 Author: Turcu Ciprian
 License: GPL
-Version: 2.1
+Version: 2.1.0.1
 Author URI: http://www.appchain.com
 
 */
@@ -597,7 +597,7 @@ function live_countdown_timer_ChangeContent($xString) {
         $xValues = $xRe->xValues;
         $xID = $xRe->xID;
     }
-    if($xID!="x|x") {
+    if($xID!="x|x" and $xID!="") {
         $xDBArr = unserialize($xValues);
 
         $postDate = $xDBArr[1];//0 is for title
