@@ -592,53 +592,56 @@ function live_countdown_timer_ChangeContent($xString) {
     $xpost_ID = $post->ID;
     $queryS = "SELECT xID, xValues FROM `". $wpdb->prefix . "live_countdown_timer_timers` WHERE `xPostID` = '".$xpost_ID."' LIMIT 1;";
     $xRes = $wpdb->get_results($queryS);
+    $xID="x|x";
     foreach ($xRes as $xRe) {
         $xValues = $xRe->xValues;
         $xID = $xRe->xID;
     }
-    $xDBArr = unserialize($xValues);
+    if($xID!="x|x") {
+        $xDBArr = unserialize($xValues);
 
-    $postDate = $xDBArr[1];//0 is for title
-    $postTextColor = $xDBArr[2];
-    $postBackground = $xDBArr[3];
-    $postFont = $xDBArr[4];
-    $postHours = $xDBArr[5];
-    $postMinutes = $xDBArr[6];
-    $postSeconds = $xDBArr[7];
+        $postDate = $xDBArr[1];//0 is for title
+        $postTextColor = $xDBArr[2];
+        $postBackground = $xDBArr[3];
+        $postFont = $xDBArr[4];
+        $postHours = $xDBArr[5];
+        $postMinutes = $xDBArr[6];
+        $postSeconds = $xDBArr[7];
 
-    $postTimerType = $xDBArr[8];
-    $postLCTTypeSize = $xDBArr[9];
-    $postDD = $xDBArr[10];
-    $postHH = $xDBArr[11];
-    $postMM = $xDBArr[12];
-    $postSS = $xDBArr[13];
-    $postTimeZone = $xDBArr[14];
-    $postTransparentBackground = $xDBArr[15];
+        $postTimerType = $xDBArr[8];
+        $postLCTTypeSize = $xDBArr[9];
+        $postDD = $xDBArr[10];
+        $postHH = $xDBArr[11];
+        $postMM = $xDBArr[12];
+        $postSS = $xDBArr[13];
+        $postTimeZone = $xDBArr[14];
+        $postTransparentBackground = $xDBArr[15];
 
-    $xNrOfDHMS = "0:12:1:3";
+        $xNrOfDHMS = "0:12:1:3";
 
-    $xRepValx='[LCT-|-embed]';
-    //calculate time with timezone
-    date_default_timezone_set($postTimeZone);
-    $xDBDate[0]=$postHours;
-    $xDBDate[1]=$postMinutes;
-    $xDBDate[2]=$postSeconds;
+        $xRepValx='[LCT-|-embed]';
+        //calculate time with timezone
+        date_default_timezone_set($postTimeZone);
+        $xDBDate[0]=$postHours;
+        $xDBDate[1]=$postMinutes;
+        $xDBDate[2]=$postSeconds;
 
-    $xArrPostDate = explode("/",$postDate);
+        $xArrPostDate = explode("/",$postDate);
 
-    $xDBDate[3]=$xArrPostDate[0];
-    $xDBDate[4]=$xArrPostDate[1];
-    $xDBDate[5]=$xArrPostDate[2];
+        $xDBDate[3]=$xArrPostDate[0];
+        $xDBDate[4]=$xArrPostDate[1];
+        $xDBDate[5]=$xArrPostDate[2];
 
-    $xNrOfDHMS = live_countdown_timer_CalcDate($xDBDate);
+        $xNrOfDHMS = live_countdown_timer_CalcDate($xDBDate);
 
-    $xValue='<div class="LCTimerWidget_Counter" id="LCTimerWidget_Counter'.$xpost_ID.'">Loading...</div>
+        $xValue='<div class="LCTimerWidget_Counter" id="LCTimerWidget_Counter'.$xpost_ID.'">Loading...</div>
 <script type="text/javascript">
     LCTimer_Count_Timer(\'#LCTimerWidget_Counter'.$xpost_ID.'\',\''.$postTextColor.'\',\''.$postBackground.'\',\''.$postFont.'\'
     ,\''.$postTimerType.'\',\''.$postLCTTypeSize.'\',\''.$postDD.'\',\''.$postHH.'\',
     \''.$postMM.'\',\''.$postSS.'\',\''.$xNrOfDHMS.'\',\''.$postTransparentBackground.'\');
 </script>';
-    $xString = str_replace($xRepValx, $xValue, $xString);
+        $xString = str_replace($xRepValx, $xValue, $xString);
+    }
     return $xString;
 }
 register_activation_hook( __FILE__, 'live_countdown_timer_Activate' );
