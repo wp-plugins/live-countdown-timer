@@ -3,7 +3,7 @@ Creator:Turcu Ciprian (nick: Cy21 & wp-user_name: ciprian_vb)
 Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ciprian_vb%40yahoo%2ecom&lc=US&item_name=Plugin%20Download&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Contributors: ciprian_vb
 Tags: plugin, images, image, pictures, picture, widget, icon, timer, countdown, time, event,events, clock, post, page, service
-Requires at least: 2.8
+Requires at least: 2.7
 Tested up to: 2.8.5
 Stable tag: trunk
 
