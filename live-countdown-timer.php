@@ -6,7 +6,7 @@ Plugin URI: http://www.appchain.com/live-countdown-timer/
 Description: Live Countdown Timer to an important event you want to show 
 Author: Turcu Ciprian
 License: GPL
-Version: 2.1.0.5
+Version: 2.1.0.6
 Author URI: http://www.appchain.com
 
 */
@@ -162,10 +162,7 @@ function live_countdown_timer_Page() {
         if($postTransparentBackground!="on") {
             $postTransparentBackground = "off";
         }
-        if($_POST['xlctPostToService']=="on") {
-            $xSend = fopen("http://events.appchain.com/lctConnect.php?u=".urlencode (get_bloginfo('url'))."&t=".urlencode (get_bloginfo('name'))."&d=".urlencode ($postDate.":".$postHours.":".$postMinutes.":".$postSeconds), "r");
-            update_option('live_countdown_timer_Values', serialize($xPostArr));
-        }
+         update_option('live_countdown_timer_Values', serialize($xPostArr));
     }
     $xDBArr = unserialize(get_option('live_countdown_timer_Values'));
     $postDate = $xDBArr[1];//0 is for title
@@ -201,7 +198,6 @@ function live_countdown_timer_Page() {
     if($postTransparentBackground!="on") {
         $postTransparentBackground = "off";
     }
-    $xlctPostToServiceState = " checked ";
     ?>
 
 <div class="wrap">
@@ -333,9 +329,6 @@ function live_countdown_timer_Page() {
 <input type="hidden" value="Arial" name="live_countdown_timer_postFont" />
 <br/><br/>
 <div class="xLCTFullWidth">
-    <h4 class="xlctPostToService"><input type="checkbox" id="xlctPostToService" name="xlctPostToService" <?php echo $xlctPostToServiceState;?> /> Post This event To Appchain Events ? <a target="_blank" href="http://events.appchain.com/about/">read more about this</a></h4>
-</div>
-<div class="xLCTFullWidth">
     <input type="submit" value="Update" />
 </div>
 </form>
@@ -396,14 +389,12 @@ function live_countdown_timer_box() {
     if($postTransparentBackground!="on") {
         $postTransparentBackground = "off";
     }
-    $xlctPostToServiceState = " checked ";
     ?>
 <script type="text/javascript">
     xLCTReturnState = <?php echo $xLCTReturnState;?>;
 </script>
 <h4><input type="checkbox" id="xlctEnable" name="xlctEnable" <?php echo $xlctEnableState;?> /> Check to Enable</h4>
 <div id="xLCTReturn">
-    <h4 class="xlctPostToService"><input type="checkbox" id="xlctPostToService" name="xlctPostToService" <?php echo $xlctPostToServiceState;?> /> Post This Event To Appchain Events? <a target="_blank" href="http://events.appchain.com/about/">read more about this</a></h4>
     <br/>(Click to select color)<br/><br/>
     <div class="xAdminDiv">
         <b>Time Zone:</b><br/>
@@ -600,13 +591,7 @@ function live_countdown_timer_AdminInit() {
                     $querySUpdate = "UPDATE `". $wpdb->prefix."live_countdown_timer_timers` SET `xValues` = '".serialize($xPostArr)."' WHERE `xID` = '".$xID."'";
                     $xRes = $wpdb->query($querySUpdate);
                 }
-                if($_POST['xlctPostToService']=="on") {
-                    $post_id_7 = get_post($xpost_ID);
-                    $xlctPostLink = get_permalink($xpost_ID);
-                    $xlctPostTitle = $post_id_7->post_title;
-
-                    $xSend = fopen("http://events.appchain.com/lctConnect.php?u=".urlencode ($xlctPostLink)."&t=".urlencode ($xlctPostTitle)."&d=".urlencode ($postDate.":".$postHours.":".$postMinutes.":".$postSeconds), "r");
-                }
+                
             }else {
                 $querySDelete = "DELETE FROM `". $wpdb->prefix."live_countdown_timer_timers` WHERE `xID` = '".$xID."'";
                 $xRes = $wpdb->query($querySDelete);

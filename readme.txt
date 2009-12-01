@@ -4,7 +4,7 @@ Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=cipria
 Contributors: ciprian_vb
 Tags: plugin, images, image, pictures, picture, widget, icon, timer, countdown, time, event,events, clock, post, page, service
 Requires at least: 2.8
-Tested up to: 2.8.5
+Tested up to: 2.8.6
 Stable tag: trunk
 
 Widget/Plugin that will enable you to show a beautifull live countdown timer for an event.
@@ -93,6 +93,10 @@ small css bug 1.2.2 is not working! upgrade to 1.2.3!
 = 2.1.0.5 = 
 
 - small modification to plugin events service... (changed hopefully for the last time the link to the subdomain name).. it is not a necessary update.. 2.1.0.4 works as a standalone plugin the same way (this modification was made for the service in case you want to post your events to events.appchain.com ).
+
+= 2.1.0.6 =
+
+- removed the events service from the plugin and killed the service :)
 
 == Screenshots ==
 
