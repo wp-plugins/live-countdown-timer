@@ -3,8 +3,8 @@ Creator:Turcu Ciprian (nick: Cy21 & wp-user_name: ciprian_vb)
 Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ciprian_vb%40yahoo%2ecom&lc=US&item_name=Plugin%20Download&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Contributors: ciprian_vb
 Tags: plugin, images, image, pictures, picture, widget, icon, timer, countdown, time, event,events, clock, post, page, service
-Requires at least: 2.8
-Tested up to: 2.8.6
+Requires at least: 3.0
+Tested up to: 3.0.1
 Stable tag: trunk
 
 Widget/Plugin that will enable you to show a beautifull live countdown timer for an event.
@@ -45,6 +45,10 @@ Upload the Live Countdown Timer plugin to your blog(in the wp-content/plugins di
 Activate it in the plugins menu in your wp-admin control panel and voila! you're done!
 
 == Changelog ==
+
+= 2.1.0.7 =
+
+Fixes some bugs for 3.0.1
 
 = 1.2 =
 
