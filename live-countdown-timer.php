@@ -6,7 +6,7 @@
   Description: Live Countdown Timer to an important event you want to show
   Author: Turcu Ciprian
   License: GPL
-  Version: 3.0
+  Version: 3.0.0.1
   Author URI: http://www.chipree.com/
 
  */
@@ -68,13 +68,13 @@ class lct_Widget extends WP_Widget {
             <option <?php if ($lct_vArr['lct_type'] == "2")
             echo "selected"; ?> value="2">Medium (Single box)</option>
             <option <?php if ($lct_vArr['lct_type'] == "3")
-            echo "selected"; ?> value="3">Small (Single box)</option>
+            echo "selected"; ?> value="3">Small (Single box-4 box)</option>
             <option <?php if ($lct_vArr['lct_type'] == "4")
-            echo "selected"; ?> value="4">Big (D:H:M:S format)</option>
+            echo "selected"; ?> value="4">Big (complete timer-4 box)</option>
             <option <?php if ($lct_vArr['lct_type'] == "5")
-            echo "selected"; ?> value="5">Medium (D:H:M:S format)</option>
+            echo "selected"; ?> value="5">Medium (complete timer-4 box)</option>
             <option <?php if ($lct_vArr['lct_type'] == "6")
-            echo "selected"; ?> value="6">Small (D:H:M:S format)</option>
+            echo "selected"; ?> value="6">Small (complete timer-4 box)</option>
         </select><br/>  
         Pick Date and Time:<br/>   
         <input type="text" name="lct_datetime" class="lct_dtp" value="<?php echo $lct_vArr['lct_datetime']; ?>"/><br/>
