@@ -33,6 +33,9 @@ One, you can just install the plugin using the wordpress admin panel or two, Upl
 Activate it in the plugins menu in your wp-admin control panel and voila! you're done!
 
 == Changelog ==
+= 3.0.0.1 =
+
+A few modifications to the admin  widget dropdown box
 
 = 3.0 =
 
