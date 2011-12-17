@@ -6,7 +6,7 @@
   Description: Live Countdown Timer to an important event you want to show
   Author: Turcu Ciprian
   License: GPL
-  Version: 3.0.0.1
+  Version: 3.0.0.2
   Author URI: http://www.chipree.com/
 
  */
@@ -37,22 +37,21 @@ class lct_Widget extends WP_Widget {
         }
         if ($lct_vArr['lct_datetime'] == "")
             $lct_vArr['lct_datetime'] = "click here";
-        if ($_POST) {
+        if (!$_POST) {
             ?>
             <script type="text/javascript">
-                jQuery(document).ready(function($) {
-                    $(".lct_dtp").live('hover',function(){
-                        $(".lct_dtp").datetimepicker({
-                            format:'m/d/Y',
-                            hourGrid: 4,
-                            minuteGrid: 10,
-                            position: 'right',
-                            onBeforeShow: function(){
-                                $(this).DatePickerSetDate($(this).val(), true);
-                            } 
-                        });
+                            
+                jQuery(".lct_dtp").live('hover',function(){
+                    jQuery(".lct_dtp").datetimepicker({
+                        format:'m/d/Y',
+                        hourGrid: 4,
+                        minuteGrid: 10,
+                        position: 'right',
+                        onBeforeShow: function(){
+                            $(this).DatePickerSetDate($(this).val(), true);
+                        } 
                     });
-                });                                                                                                                              
+                });
             </script>
 
             <?php
@@ -177,13 +176,11 @@ function lct_admin_script() {
     wp_register_script('jquery-ui-corex', plugins_url('scripts/jquery-ui-1.8.16.custom.min.js', __FILE__));
     wp_register_script('jqueryuitimepickeraddon', plugins_url('scripts/jquery-ui-timepicker-addon.js', __FILE__));
     wp_register_script('jqueryuisliderAccess', plugins_url('scripts/jquery-ui-sliderAccess.js', __FILE__));
-    wp_register_script('lct_admin_script', plugins_url('admin_script.js', __FILE__));
 
     //wp_enqueue_script('jqueryx');
     wp_enqueue_script('jquery-ui-corex');
     wp_enqueue_script('jqueryuitimepickeraddon');
     wp_enqueue_script('jqueryuisliderAccess');
-    wp_enqueue_script('lct_admin_script');
 }
 
 add_action('wp_print_styles', 'lct_AddStyle');
