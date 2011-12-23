@@ -6,7 +6,7 @@
   Description: Live Countdown Timer to an important event you want to show
   Author: Turcu Ciprian
   License: GPL
-  Version: 3.0.0.2
+  Version: 3.0.1.0
   Author URI: http://www.chipree.com/
 
  */
@@ -40,7 +40,7 @@ class lct_Widget extends WP_Widget {
         if (!$_POST) {
             ?>
             <script type="text/javascript">
-                            
+                                                                
                 jQuery(".lct_dtp").live('hover',function(){
                     jQuery(".lct_dtp").datetimepicker({
                         format:'m/d/Y',
@@ -67,13 +67,13 @@ class lct_Widget extends WP_Widget {
             <option <?php if ($lct_vArr['lct_type'] == "2")
             echo "selected"; ?> value="2">Medium (Single box)</option>
             <option <?php if ($lct_vArr['lct_type'] == "3")
-            echo "selected"; ?> value="3">Small (Single box-4 box)</option>
+            echo "selected"; ?> value="3">Small (Single box)</option>
             <option <?php if ($lct_vArr['lct_type'] == "4")
-            echo "selected"; ?> value="4">Big (complete timer-4 box)</option>
+            echo "selected"; ?> value="4">Big (complete timer-5 box)</option>
             <option <?php if ($lct_vArr['lct_type'] == "5")
-            echo "selected"; ?> value="5">Medium (complete timer-4 box)</option>
+            echo "selected"; ?> value="5">Medium (complete timer-5 box)</option>
             <option <?php if ($lct_vArr['lct_type'] == "6")
-            echo "selected"; ?> value="6">Small (complete timer-4 box)</option>
+            echo "selected"; ?> value="6">Small (complete timer-5 box)</option>
         </select><br/>  
         Pick Date and Time:<br/>   
         <input type="text" name="lct_datetime" class="lct_dtp" value="<?php echo $lct_vArr['lct_datetime']; ?>"/><br/>
@@ -120,6 +120,7 @@ class lct_Widget extends WP_Widget {
                 break;
             case "4":
                 echo '<div class="LCT">';
+                echo '<div class="big"><div class="type">YEARS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
                 echo '<div class="big"><div class="type">DAYS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
                 echo '<div class="big"><div class="type">HOURS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
                 echo '<div class="big"><div class="type">MINUTES</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
@@ -128,6 +129,7 @@ class lct_Widget extends WP_Widget {
                 break;
             case "5":
                 echo '<div class="LCT">';
+                echo '<div class="medium"><div class="type">YEARS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
                 echo '<div class="medium"><div class="type">DAYS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
                 echo '<div class="medium"><div class="type">HOURS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
                 echo '<div class="medium"><div class="type">MINUTES</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
@@ -136,6 +138,7 @@ class lct_Widget extends WP_Widget {
                 break;
             case "6":
                 echo '<div class="LCT">';
+                echo '<div class="small"><div class="type">YEARS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
                 echo '<div class="small"><div class="type">DAYS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
                 echo '<div class="small"><div class="type">HOURS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
                 echo '<div class="small"><div class="type">MINUTES</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
