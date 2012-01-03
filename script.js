@@ -14,7 +14,7 @@ function setlct(datetime){
     var days=hours*24;
     var years=days*365;
         
-    var db_time = new Date(tempdate[1]+' '+tempdate[2]+', '+tempdate[0]+' '+temptime[0]+':'+temptime[1]+':00');
+    var db_time = new Date(tempdate[0], tempdate[1]-1, tempdate[2], temptime[0], temptime[1], 00);
     var now_time = new Date();
     db_time = db_time.getTime();
     now_time = now_time.getTime();

@@ -34,6 +34,10 @@ Activate it in the plugins menu in your wp-admin control panel and voila! you're
 
 == Changelog ==
 
+= 3.0.1.1 =
+
+IE Bug Fixed
+
 = 3.0.0.2 =
 
 A small but important javascript error in admin fixed.

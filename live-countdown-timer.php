@@ -6,7 +6,7 @@
   Description: Live Countdown Timer to an important event you want to show
   Author: Turcu Ciprian
   License: GPL
-  Version: 3.0.1.0
+  Version: 3.0.1.1
   Author URI: http://www.chipree.com/
 
  */
