@@ -6,7 +6,7 @@
   Description: Live Countdown Timer to an important event you want to show
   Author: Turcu Ciprian
   License: GPL
-  Version: 3.0.1.2
+  Version: 3.0.1.3
   Author URI: http://www.chipree.com/
 
  */
@@ -57,6 +57,7 @@ class lct_Widget extends WP_Widget {
             <?php
         }
         ?>
+            <div class="highlight">Want More styles and colors? <br/> Upgrade now! Click:<br/><a href="http://chipree.com/live-countdown-timer/">Live Countdown Timer Premium</a></div>
         Title:<br/>   
         <input type="text" name="lct_title" value="<?php echo $lct_vArr['lct_title']; ?>"/><br/><br/> 
 
