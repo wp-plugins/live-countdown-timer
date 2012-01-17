@@ -3,7 +3,7 @@ lct_hours = 0
 lct_minutes = 0
 lct_seconds = 0
 
-function setlct(datetime){
+function calc_data(dateandtime){
     dateandtime = datetime.split(" ");
     tempdate = dateandtime[0].split("/");
     temptime = dateandtime[1].split(":");
@@ -39,8 +39,27 @@ function setlct(datetime){
     if(lct_minutes>60)lct_minutes=60;
     if(lct_minutes<0)lct_minutes=0;
     if(lct_seconds<0)lct_seconds=0;
-        
-       
+}
+
+function setlct(datetime){
+    calc_data(datetime);
+    if(lct_years==0){
+        jQuery('.LCT').find('div:nth-child(1)').removeClass('hide').addClass('hide');
+        if(lct_days==0){
+            jQuery('.LCT').find('div:nth-child(2)').removeClass('hide').addClass('hide');
+            if(lct_hours==0){
+                jQuery('.LCT').find('div:nth-child(3)').removeClass('hide').addClass('hide');
+                if(lct_minutes==0){
+                    jQuery('.LCT').find('div:nth-child(4)').removeClass('hide').addClass('hide');
+                //if(lct_seconds==0)
+                //jQuery('.LCT').find('div:nth-child(5)').removeClass('hide').addClass('hide');
+                }
+            }
+        }
+    }
+    
+    
+    
     if(jQuery('.LCT').find('div.type').siblings().length==5){
         jQuery('.LCT').find('div:nth-child(1) .bg p').html(lct_years);
         jQuery('.LCT').find('div:nth-child(2) .bg p').html(lct_days);
