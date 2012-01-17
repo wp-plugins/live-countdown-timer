@@ -11,19 +11,22 @@ Wordpress Widget that will enable you to show a beautifull live countdown timer 
 == Description ==
 Widget that will enable you to show a beautifull stylisg live countdown timer for an event that comes in many sizes and types.<br/>
 Everything works with jQuery, wordpress api's and php.
-<br/>
-<h3>Features</h3>
-<br/>
 
-- Widget that will enable you to show a beautifull live countdown timer for an event. <br/>
+<h3>Premium Version Available!</h3>
+More styles, more colors for each style! VIP support, free updates and more.
+<a href="http://chipree.com/live-countdown-timer/">Upgrade to Premium</a>
+Click the above link to get
+
+<h3>Free version Features</h3>
+
+- Widget that will enable you to show a beautifull live countdown timer for an event. 
 - the flip boxes organize accourding to the width of the widget so they fit the best way.
 - Comes in 2 main types:Single box or DD:HH:MM:SS format.
 - the Single Box automatically updates the title type(DAYS, HOURS, MINUTES, SECONDS) as it progresses.
 <br/><br/>
 
-<a href="http://chipree.com/live-countdown-timer/">More details</a><br/>
-For  Sugestions / bugs / thanks <a href="http://chipree.com/forums/">Click Here</a><br/> or contact us directly <a href="http://chipree.com/contact/">Click Here</a><br/>
-<br/>
+<a href="http://chipree.com/live-countdown-timer/">Upgrade to Premium</a>
+For  Sugestions / bugs / thanks <a href="http://chipree.com/support/">Click Here</a> 
 For our other plugins: <a href="http://wordpress.org/extend/plugins/profile/ciprian_vb">Click Here</a>
 
 == Installation ==
@@ -33,6 +36,10 @@ One, you can just install the plugin using the wordpress admin panel or two, Upl
 Activate it in the plugins menu in your wp-admin control panel and voila! you're done!
 
 == Changelog ==
+
+= 3.0.1.3 =
+
+Just some readme changes. no actual change to the plugin
 
 = 3.0.1.2 =
 
