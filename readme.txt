@@ -33,6 +33,8 @@ Activate it in the plugins menu in your wp-admin control panel and voila! you're
 
 ==Screenshots==
 
+Screenshot examples
+
 1.first example
 2.second example
 3.third example
