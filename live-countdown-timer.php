@@ -3,10 +3,10 @@
 
   Plugin Name: Live Countdown Timer
   Plugin URI: http://www.chipree.com/
-  Description: Live Countdown Timer to an important event you want to show
+  Description: Live Countdown Timer to an important event you want to show.In 3 different styles and many colors.
   Author: Turcu Ciprian
   License: GPL
-  Version: 3.0.1.3
+  Version: 3.1
   Author URI: http://www.chipree.com/
 
  */
@@ -30,7 +30,9 @@ class lct_Widget extends WP_Widget {
         else {
             if ($_POST['lct_wh'] == 'true') {
                 $lct_vArr['lct_title'] = $_POST['lct_title'];
-                $lct_vArr['lct_type'] = $_POST['lct_type'];
+                $lct_vArr['lct_style'] = $_POST['lct_style'];
+                $lct_vArr['lct_color'] = $_POST['lct_color'];
+                $lct_vArr['lct_size'] = $_POST['lct_size'];
                 $lct_vArr['lct_datetime'] = $_POST['lct_datetime'];
                 update_option('lct__wvID_' . $this->number, serialize($lct_vArr));
             }
@@ -40,7 +42,7 @@ class lct_Widget extends WP_Widget {
         if (!$_POST) {
             ?>
             <script type="text/javascript">
-                                                                
+                                                                                                                                                                                                                                                                            
                 jQuery(".lct_dtp").live('hover',function(){
                     jQuery(".lct_dtp").datetimepicker({
                         format:'m/d/Y',
@@ -57,26 +59,61 @@ class lct_Widget extends WP_Widget {
             <?php
         }
         ?>
-            <div class="highlight">Want More styles and colors? <br/> Upgrade now! Click:<br/><a href="http://chipree.com/live-countdown-timer/">Live Countdown Timer Premium</a></div>
-        Title:<br/>   
+        <h3>Widget Title</h3>
         <input type="text" name="lct_title" value="<?php echo $lct_vArr['lct_title']; ?>"/><br/><br/> 
 
-        Timer Type:<br/>   
-        <select name="lct_type" >
-            <option <?php if ($lct_vArr['lct_type'] == "1")
-            echo "selected"; ?> value="1">Big (Single box)</option>
-            <option <?php if ($lct_vArr['lct_type'] == "2")
-            echo "selected"; ?> value="2">Medium (Single box)</option>
-            <option <?php if ($lct_vArr['lct_type'] == "3")
-            echo "selected"; ?> value="3">Small (Single box)</option>
-            <option <?php if ($lct_vArr['lct_type'] == "4")
-            echo "selected"; ?> value="4">Big (complete timer-5 box)</option>
-            <option <?php if ($lct_vArr['lct_type'] == "5")
-            echo "selected"; ?> value="5">Medium (complete timer-5 box)</option>
-            <option <?php if ($lct_vArr['lct_type'] == "6")
-            echo "selected"; ?> value="6">Small (complete timer-5 box)</option>
+        <h3>Style</h3>
+        Timer Style:<br/>
+        <select name="lct_style" >
+            <option <?php
+        if ($lct_vArr['lct_style'] == "sf")
+            echo "selected";
+        ?> value="sf">Single-Flip panel Style</option>
+            <option <?php
+        if ($lct_vArr['lct_style'] == "cal")
+            echo "selected";
+        ?> value="cal">Calendar Style</option>
         </select><br/>  
-        Pick Date and Time:<br/>   
+        Style color:<br/>
+        <select name="lct_color" >
+            <option <?php
+        if ($lct_vArr['lct_color'] == "black")
+            echo "selected";
+        ?> value="black">Black (default)</option>
+            <option <?php
+        if ($lct_vArr['lct_color'] == "white")
+            echo "selected";
+        ?> value="white">White</option>
+            <option <?php
+        if ($lct_vArr['lct_color'] == "red")
+            echo "selected";
+        ?> value="red">Red</option>
+            <option <?php
+        if ($lct_vArr['lct_color'] == "green")
+            echo "selected";
+        ?> value="green">Green</option>
+            <option <?php
+        if ($lct_vArr['lct_color'] == "orange")
+            echo "selected";
+        ?> value="orange">Orange</option>
+            <option <?php
+        if ($lct_vArr['lct_color'] == "violet")
+            echo "selected";
+        ?> value="violet">Violet</option>
+            <option <?php
+        if ($lct_vArr['lct_color'] == "blue")
+            echo "selected";
+        ?> value="blue">Blue</option>
+            <option <?php
+        if ($lct_vArr['lct_color'] == "yellow")
+            echo "selected";
+        ?> value="yellow">Yellow</option>
+        </select><br/>  
+        Style Size:<br/>
+        <input type="radio" name="lct_size" <?php if ($lct_vArr['lct_size'] == 'big') echo ' checked '; ?> value="big" /> Big |
+        <input type="radio" name="lct_size" <?php if ($lct_vArr['lct_size'] == 'medium') echo ' checked '; ?> value="medium" /> Medium |
+        <input type="radio" name="lct_size" <?php if ($lct_vArr['lct_size'] == 'small') echo ' checked '; ?> value="small" /> Small
+        <h3>Date and time</h3>
         <input type="text" name="lct_datetime" class="lct_dtp" value="<?php echo $lct_vArr['lct_datetime']; ?>"/><br/>
 
         <input type="hidden" name="lct_wh" value="true" />
@@ -87,8 +124,10 @@ class lct_Widget extends WP_Widget {
         // processes widget options to be saved
         if ($_POST['lct_wh'] == 'true') {
             $lct_vArr['lct_title'] = $_POST['lct_title'];
-            $lct_vArr['lct_type'] = $_POST['lct_type'];
-            $lct_vArr['lct_date'] = $_POST['lct_datetime'];
+            $lct_vArr['lct_style'] = $_POST['lct_style'];
+            $lct_vArr['lct_color'] = $_POST['lct_color'];
+            $lct_vArr['lct_size'] = $_POST['lct_size'];
+            $lct_vArr['lct_datetime'] = $_POST['lct_datetime'];
             update_option('lct__wvID_' . $this->number, serialize($lct_vArr));
         }
     }
@@ -98,7 +137,13 @@ class lct_Widget extends WP_Widget {
         // outputs the content of the widget
         extract($args);
         $lct_arr = unserialize(get_option('lct__wvID_' . $this->number));
-
+        $lct_size = $lct_arr['lct_size'];
+        $lct_style = $lct_arr['lct_style'];
+        $lct_color = $lct_arr['lct_color'];
+        if ($lct_color == "")
+            $lct_color = 'black';
+        if ($lct_style == "")
+            $lct_style = 'sf';
         echo $before_widget;
 
         echo $before_title . $lct_arr['lct_title'] . $after_title;
@@ -109,44 +154,14 @@ class lct_Widget extends WP_Widget {
         ?>
         <input type="hidden" class="lct_datetime" value="<?php echo $datetimehidd; ?>" />
         <?php
-        switch ($lct_arr['lct_type']) {
-            case "1":
-                echo '<div class="LCT"><div class="big"><div class="type">DAYS</div><div class="bg"><p>--</p><div class="over"></div></div></div></div>';
-                break;
-            case "2":
-                echo '<div class="LCT"><div class="medium"><div class="type">DAYS</div><div class="bg"><p>--</p><div class="over"></div></div></div></div>';
-                break;
-            case "3":
-                echo '<div class="LCT"><div class="small"><div class="type">DAYS</div><div class="bg"><p>--</p><div class="over"></div></div></div></div>';
-                break;
-            case "4":
-                echo '<div class="LCT">';
-                echo '<div class="big"><div class="type">YEARS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="big"><div class="type">DAYS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="big"><div class="type">HOURS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="big"><div class="type">MINUTES</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="big"><div class="type">SECONDS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '</div>';
-                break;
-            case "5":
-                echo '<div class="LCT">';
-                echo '<div class="medium"><div class="type">YEARS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="medium"><div class="type">DAYS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="medium"><div class="type">HOURS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="medium"><div class="type">MINUTES</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="medium"><div class="type">SECONDS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '</div>';
-                break;
-            case "6":
-                echo '<div class="LCT">';
-                echo '<div class="small"><div class="type">YEARS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="small"><div class="type">DAYS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="small"><div class="type">HOURS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="small"><div class="type">MINUTES</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '<div class="small"><div class="type">SECONDS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
-                echo '</div>';
-                break;
-        }
+        echo '<div class="LCT ' . $lct_style . "_" . $lct_color . '">';
+        echo '<div class="' . $lct_size . '"><div class="type">YEARS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
+        echo '<div class="' . $lct_size . '"><div class="type">DAYS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
+        echo '<div class="' . $lct_size . '"><div class="type">HOURS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
+        echo '<div class="' . $lct_size . '"><div class="type">MINUTES</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
+        echo '<div class="' . $lct_size . '"><div class="type">SECONDS</div><div class="bg"><p>--</p><div class="over"></div></div></div>';
+        echo '</div>';
+
 
         echo $after_widget;
     }

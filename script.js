@@ -51,8 +51,8 @@ function setlct(datetime){
                 jQuery('.LCT').find('div:nth-child(3)').removeClass('hide').addClass('hide');
                 if(lct_minutes==0){
                     jQuery('.LCT').find('div:nth-child(4)').removeClass('hide').addClass('hide');
-                //if(lct_seconds==0)
-                //jQuery('.LCT').find('div:nth-child(5)').removeClass('hide').addClass('hide');
+                    //if(lct_seconds==0)
+                        //jQuery('.LCT').find('div:nth-child(5)').removeClass('hide').addClass('hide');
                 }
             }
         }
