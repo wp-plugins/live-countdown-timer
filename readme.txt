@@ -31,6 +31,14 @@ One, you can just install the plugin using the wordpress admin panel or two, Upl
 
 Activate it in the plugins menu in your wp-admin control panel and voila! you're done!
 
+==Screenshots==
+
+1.first example
+2.second example
+3.third example
+4.forth
+5.last example -admin
+
 == Changelog ==
 
 =3.1=
