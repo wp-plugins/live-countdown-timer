@@ -6,7 +6,7 @@
   Description: Live Countdown Timer to an important event you want to show.In 3 different styles and many colors.
   Author: Turcu Ciprian
   License: GPL
-  Version: 3.1
+  Version: 3.1.0.0.1
   Author URI: http://www.chipree.com/
 
  */
