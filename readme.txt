@@ -42,9 +42,17 @@ Screenshot examples
 2. second example
 3. third example
 4. forth
-5. last example -admin
+5. another image demo
+6. 6'th image demo
+7. 7'th image demo
+8. 8'th image demo
+
 
 == Changelog ==
+
+=3.1.0.0.7=
+
+fixed a css bug.
 
 =3.1=
 
